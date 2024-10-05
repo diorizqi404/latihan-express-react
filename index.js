@@ -1,6 +1,7 @@
 const express = require('express') // import express
 const cors = require('cors') // import cors
 const bodyParser = require('body-parser') // import body-parser
+const router = require('./routes') // import router
 
 // init app
 const app = express()
@@ -16,6 +17,8 @@ const port = 3000
 app.get('/', (req, res) => {
     res.send("hello world")
 })
+
+app.use('/api', router)
 
 //start server
 app.listen(port, () => {
