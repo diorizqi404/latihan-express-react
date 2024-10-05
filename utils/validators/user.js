@@ -1,12 +1,12 @@
 const { body } = require('express-validator')
-const prisma = require('../prisma/client')
+const prisma = require('../../prisma/client')
 
 const validateUser = [
     body('name').notEmpty().withMessage('Name is required.'),
     body('email')
         .notEmpty().withMessage('Email is required.')
         .isEmail().withMessage('Email is invalid.')
-        .custom(async (value) => {
+        .custom(async (value, { req }) => {
             if (!value) throw new Error('Email is required.')
             
             const user = await prisma.user.findUnique({ where: { email: value } })
