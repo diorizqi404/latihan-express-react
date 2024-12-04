@@ -1,7 +1,21 @@
-
 # Website User Management
 
 This project is a simple CRUD (Create, Read, Update, Delete) application for managing users with authentication. The frontend is built with React, and the backend is powered by Express.
+
+## Table of Contents
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Installation & Setup](#installation--setup)
+  - [Frontend](#for-frontend)
+  - [Backend](#for-backend)
+- [Environment Variables](#environment-variables)
+  - [Frontend Configuration](#frontend-configuration)
+  - [Backend Configuration](#backend-configuration)
+- [Deployment](#deployment)
+  - [Local/development](#localdevelopment)
+  - [Production](#production)
+- [License](#license)
+- [Authors](#authors)
 
 ## Tech Stack
 This website build with several tech stack below
@@ -10,30 +24,22 @@ This website build with several tech stack below
 
 **Server:** NodeJS, Express, MySQL, JWT
 
+## Prerequisites
+- Node.js (prefer use lts)
+- npm (Node Package Manager)
+- MySQL/MariaDB
 
 ## Installation & Setup
 Follow these instructions to set up the project on your local machine or production.
 
-### Frontend
-
 #### 1. Clone the repository
+
+##### for frontend
 ```bash
   git clone -b frontend https://github.com/diorizqi404/latihan-express-react.git
 ```
 
-#### 2. Go to project directory
-```bash
-  cd latihan-express-react
-```
-
-#### 3. Install dependencies
-```bash
-  npm install
-```
-
-### Backend
-
-#### 1. Clone the repository
+##### for backend
 ```bash
   git clone -b backend https://github.com/diorizqi404/latihan-express-react.git
 ```
@@ -89,21 +95,17 @@ Follow these instructions to deploy the project on your local machine or product
 
 ### Production
 
-#### Frontend Server
+For production, the steps are the same. It's just different on the frontend.
+
 ```bash
   npm run build
 ```
 
-#### Backend Server
-```bash
-  npm start
-```
-
 > Alternative, you can use `serve` for frontend server and `pm2` for backend server. See this [tutorial](https://medium.com/@diorizqi/deploy-react-dan-express-di-aws-ec2-instance-4758d4b0427f)
 
+## License
 
-
-
+This project is licensed under the MIT License.
 
 ## Authors
 
