@@ -54,6 +54,11 @@ Follow these instructions to set up the project on your local machine or product
   npm install
 ```
 
+#### 3.1 Migrate Database (only for backend)
+```bash
+  npx prisma migrate dev
+```
+
 ## Environment Variables
 
 To run this project, you will need to change the following environment variables to your .env file for backend and api.js for frontend.
@@ -95,13 +100,18 @@ Follow these instructions to deploy the project on your local machine or product
 
 ### Production
 
-For production, the steps are the same. It's just different on the frontend.
+For backend, you must migrate deploy first.
+```bash
+  npx prisma migrate deploy
+```
+
+> Alternative, you can use `pm2` for backend server. See this [tutorial](https://medium.com/@diorizqi/deploy-react-dan-express-di-aws-ec2-instance-4758d4b0427f)
+
+For production, you must build first an then the result on the folder `dist`.
 
 ```bash
   npm run build
 ```
-
-> Alternative, you can use `serve` for frontend server and `pm2` for backend server. See this [tutorial](https://medium.com/@diorizqi/deploy-react-dan-express-di-aws-ec2-instance-4758d4b0427f)
 
 ## License
 
