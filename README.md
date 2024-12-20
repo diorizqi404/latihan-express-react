@@ -105,9 +105,18 @@ For backend, you must migrate deploy first.
   npx prisma migrate deploy
 ```
 
-> Alternative, you can use `pm2` for backend server. See this [tutorial](https://medium.com/@diorizqi/deploy-react-dan-express-di-aws-ec2-instance-4758d4b0427f)
+> Alternative, you can use `pm2` for backend server.
 
-For production, you must build first an then the result on the folder `dist`.
+To automatically launch every restart, you can run the command
+```bash
+  # to run automatically after restart
+  pm2 startup
+
+  # to save the service
+  pm2 save --force
+```
+
+For frontend, you must build first an then the result on the folder `dist`.
 
 ```bash
   npm run build
